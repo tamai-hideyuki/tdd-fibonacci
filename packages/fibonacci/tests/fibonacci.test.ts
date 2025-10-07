@@ -1,6 +1,6 @@
 import { fibonacci } from '../src/fibonacci';
 
-describe (`fibonacci`, () => {
+describe (`フィボナッチ数列`, () => {
     test(`最初のフィボナッチ数は1`, ()=> {
         expect(fibonacci(1)).toBe(1);
     });
