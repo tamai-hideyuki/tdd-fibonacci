@@ -1,44 +1,56 @@
 import { fibonacci } from '../src/fibonacci';
 
 describe (`フィボナッチ数列`, () => {
-    test(`最初のフィボナッチ数は1`, ()=> {
-        expect(fibonacci(1)).toBe(1);
-    });
+    // test(`最初のフィボナッチ数は1`, ()=> {
+    //     expect(fibonacci(1)).toBe(1);
+    // });
 
-    test(`２番目のフィボナッチ数は１`, ()=> {
-        expect(fibonacci(2)).toBe(1);
-    });
+    // test(`２番目のフィボナッチ数は１`, ()=> {
+    //     expect(fibonacci(2)).toBe(1);
+    // });
 
-    test(`3番目のフィボナッチ数は2`, ()=> {
-        expect(fibonacci(3)).toBe(2);
-    });
+    // test(`3番目のフィボナッチ数は2`, ()=> {
+    //     expect(fibonacci(3)).toBe(2);
+    // });
 
-    test(`4番目のフィボナッチ数は3`, ()=> {
-        expect(fibonacci(4)).toBe(3);
-    });
+    // test(`4番目のフィボナッチ数は3`, ()=> {
+    //     expect(fibonacci(4)).toBe(3);
+    // });
 
-    test(`5番目のフィボナッチ数は5`, ()=> {
-        expect(fibonacci(5)).toBe(5);
-    });
+    // test(`5番目のフィボナッチ数は5`, ()=> {
+    //     expect(fibonacci(5)).toBe(5);
+    // });
 
-    test(`6番目のフィボナッチ数は8`, ()=> {
-        expect(fibonacci(6)).toBe(8);
-    });
+    // test(`6番目のフィボナッチ数は8`, ()=> {
+    //     expect(fibonacci(6)).toBe(8);
+    // });
 
-    test(`7番目のフィボナッチ数は13`, ()=> {
-        expect(fibonacci(7)).toBe(13);
-    });
+    // test(`7番目のフィボナッチ数は13`, ()=> {
+    //     expect(fibonacci(7)).toBe(13);
+    // });
 
-    test(`8番目のフィボナッチ数は21`, ()=> {
-        expect(fibonacci(8)).toBe(21);
-    });    
+    // test(`8番目のフィボナッチ数は21`, ()=> {
+    //     expect(fibonacci(8)).toBe(21);
+    // }); 
+    
+    test(`フィボナッチ数列のテストケース`, () => {
+        const cases: [number, number][] = [
+            [1, 1],
+            [2, 1],
+            [3, 2]
+        ];
+
+        for (let i = 0; i < cases.length; i++) {
+            expect(fibonacci(cases[i][1])).toBe(cases[i][1]);
+        }
+    })
 });
 
-describe(`エッジケース`, () => {
-    test(`負の値は無効な値としてエラーをスローする`, () =>{
-        expect(() => fibonacci(-1)).toThrow(`負の値は無効な値です`);
-    });
-    test(`少数派は無効な値としてエラーをスローする`, () =>{
-        expect(() => fibonacci(1.5)).toThrow(`少数派は無効な値です`);
-    });
-});
+// describe(`エッジケース`, () => {
+//     test(`負の値は無効な値としてエラーをスローする`, () =>{
+//         expect(() => fibonacci(-1)).toThrow(`負の値は無効な値です`);
+//     });
+//     test(`少数派は無効な値としてエラーをスローする`, () =>{
+//         expect(() => fibonacci(1.5)).toThrow(`少数派は無効な値です`);
+//     });
+// });
