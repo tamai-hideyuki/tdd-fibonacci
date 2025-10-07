@@ -1,9 +1,17 @@
 export function fibonacci(n: number): number {
-    if (n === 1) return 1;
-    if (n === 2) return 1;
-    return fibonacci(n -1) + fibonacci(n -2);
+
+    if (n < 1) {
+    throw new Error(`負の値は無効な値です`);
 }
 
+if (!Number.isInteger(n)) {
+    throw new Error(`整数のみ有効な値です`);
+}
+
+if (n === 1) return 1;
+if (n === 2) return 1;
+return fibonacci(n -1) + fibonacci(n -2);
+}
 // export function fibonacci(n: number): number {
 //     if (n === 1) return 1;
 //     if (n === 2) return 1;
