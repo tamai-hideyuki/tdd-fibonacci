@@ -1,8 +1,14 @@
 export function fibonacci(n: number): number {
     if (n === 1) return 1;
     if (n === 2) return 1;
-    if (n === 3) return 2;
-    return 3;
+    return fibonacci(n -1) + fibonacci(n -2);
+}
+
+// export function fibonacci(n: number): number {
+//     if (n === 1) return 1;
+//     if (n === 2) return 1;
+//     if (n === 3) return 2;
+//     return 3;
 
     // if (n === 1) return 1;
     // if (n === 2) return 1;
@@ -24,4 +30,4 @@ export function fibonacci(n: number): number {
 //         prev = current;
 //         current = next;
 //     }    
-}
+// }

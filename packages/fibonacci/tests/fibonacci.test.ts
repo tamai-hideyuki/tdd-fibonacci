@@ -33,19 +33,21 @@ describe (`フィボナッチ数列`, () => {
     //     expect(fibonacci(8)).toBe(21);
     // }); 
     
-    test(`フィボナッチ数列のテストケース`, () => {
-        const cases: [number, number][] = [
+    // test(`フィボナッチ数列のテストケース`, () => {
+       test.each([
             [1, 1],
             [2, 1],
             [3, 2],
-            [4, 3]
-        ];
-
-        for (let i = 0; i < cases.length; i++) {
-            expect(fibonacci(cases[i][0])).toBe(cases[i][1]);
-        }
-    })
+            [4, 3],
+            [5, 5],
+            [6, 8],
+            [7, 13],
+            [10, 55]
+        ])(`fibonacci(%i)は %i を返す`, (input, expected) => {
+        expect(fibonacci(input)).toBe(expected);
+    });
 });
+// });
 
 // describe(`エッジケース`, () => {
 //     test(`負の値は無効な値としてエラーをスローする`, () =>{
