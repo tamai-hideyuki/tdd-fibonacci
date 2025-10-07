@@ -41,7 +41,7 @@ describe (`フィボナッチ数列`, () => {
         ];
 
         for (let i = 0; i < cases.length; i++) {
-            expect(fibonacci(cases[i][1])).toBe(cases[i][1]);
+            expect(fibonacci(cases[i][0])).toBe(cases[i][1]);
         }
     })
 });
