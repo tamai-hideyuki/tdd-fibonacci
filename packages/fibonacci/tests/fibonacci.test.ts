@@ -37,7 +37,8 @@ describe (`フィボナッチ数列`, () => {
         const cases: [number, number][] = [
             [1, 1],
             [2, 1],
-            [3, 2]
+            [3, 2],
+            [4, 3]
         ];
 
         for (let i = 0; i < cases.length; i++) {
