@@ -13,13 +13,23 @@ describe (`fibonacci`, () => {
         expect(fibonacci(3)).toBe(2);
     });
 
-    test(`4番目の数は3`, ()=> {
+    test(`4番目のフィボナッチ数は3`, ()=> {
         expect(fibonacci(4)).toBe(3);
     });
 
-    // test(`5番目の数は5`, ()=> {
+    test(`5番目のフィボナッチ数は5`, ()=> {
+        expect(fibonacci(5)).toBe(5);
+    });
 
-    // });
-    
-    
+    test(`6番目のフィボナッチ数は8`, ()=> {
+        expect(fibonacci(6)).toBe(8);
+    });
+
+    test(`7番目のフィボナッチ数は13`, ()=> {
+        expect(fibonacci(7)).toBe(13);
+    });
+
+    test(`8番目のフィボナッチ数は21`, ()=> {
+        expect(fibonacci(8)).toBe(21);
+    });    
 });
