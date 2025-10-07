@@ -1,6 +1,12 @@
 export function fibonacci(n: number): number {
-    if (n === 1) return 1;
-    if (n === 2) return 1;
+    // if (n === 1) return 1;
+    // if (n === 2) return 1;
+    if (n <= 0) {
+        throw new Error(`負の値は無効な値です`);
+    }
+    if (n % 1 !== 0) {
+        throw new Error(`少数派は無効な値です`);
+    }
     
     let prev = 1;
     let current = 1;

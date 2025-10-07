@@ -33,3 +33,12 @@ describe (`fibonacci`, () => {
         expect(fibonacci(8)).toBe(21);
     });    
 });
+
+describe(`エッジケース`, () => {
+    test(`負の値は無効な値としてエラーをスローする`, () =>{
+        expect(() => fibonacci(-1)).toThrow(`負の値は無効な値です`);
+    });
+    test(`少数派は無効な値としてエラーをスローする`, () =>{
+        expect(() => fibonacci(1.5)).toThrow(`少数派は無効な値です`);
+    });
+});
