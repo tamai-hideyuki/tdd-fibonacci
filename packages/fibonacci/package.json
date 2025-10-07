@@ -1,0 +1,17 @@
+{
+  "name": "@tdd-fibonacci/fibonacci",
+  "version": "1.0.0",
+  "main": "dist/fibonacci.js",
+  "types": "dist/fibonacci.d.ts",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "*",
+    "jest": "*",
+    "ts-jest": "*",
+    "typescript": "*"
+  }
+}
