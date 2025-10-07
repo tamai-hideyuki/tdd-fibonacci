@@ -13,9 +13,9 @@ describe (`fibonacci`, () => {
         expect(fibonacci(3)).toBe(2);
     });
 
-    // test(`4番目の数は3`, ()=> {
-
-    // });
+    test(`4番目の数は3`, ()=> {
+        expect(fibonacci(4)).toBe(3);
+    });
 
     // test(`5番目の数は5`, ()=> {
 
